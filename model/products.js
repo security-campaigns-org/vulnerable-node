@@ -34,8 +34,8 @@ function purchase(cart) {
         cart.username,
         cart.product_id,
         cart.address,
-        cart.ship_date,
         cart.phone,
+        cart.ship_date,
         cart.price
     ]);
 
