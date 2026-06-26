@@ -7,6 +7,7 @@ var fs = require("fs");
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var lusca = require('lusca');
 var log4js = require("log4js");
 
 var init_db = require('./model/init_db');
@@ -47,6 +48,7 @@ app.use(session({
     maxAge: 99999999999
   }
 }));
+app.use(lusca.csrf());
 
 /*
  * Routes config
